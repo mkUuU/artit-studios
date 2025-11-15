@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Color Palette - CYAN, PINK, PURPLE, ORANGE */
+  --primary: oklch(0.65 0.22 200);           /* Cyan Blue */
+  --primary-foreground: oklch(1 0 0);        /* White text */
+  
+  --secondary: oklch(0.65 0.25 330);         /* Hot Pink */
+  --secondary-foreground: oklch(1 0 0);
+  
+  --accent: oklch(0.68 0.2 50);              /* Orange/Gold */
+  --accent-foreground: oklch(1 0 0);
+  
+  --background: oklch(0.98 0.01 0);
+  --foreground: oklch(0.15 0.02 0);
+  --card: oklch(1 0 0);
+  --muted: oklch(0.92 0.01 0);
+  --border: oklch(0.92 0.01 0);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --primary: oklch(0.7 0.25 200);
+  --secondary: oklch(0.7 0.28 330);
+  --accent: oklch(0.75 0.22 50);
+  --background: oklch(0.15 0.02 0);
+  --foreground: oklch(0.95 0.01 0);
+  --card: oklch(0.2 0.02 0);
+  --muted: oklch(0.3 0.02 0);
+  --border: oklch(0.3 0.02 0);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  /* Map CSS variables to theme tokens */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+}
+
+@layer utilities {
+  /* Custom gradient utilities */
+  .gradient-cyan-pink {
+    background: linear-gradient(135deg, #00d9ff 0%, #ff1493 100%);
+  }
+
+  .gradient-pink-purple {
+    background: linear-gradient(135deg, #ff1493 0%, #9d4edd 100%);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #00d9ff 0%, #ff1493 50%, #9d4edd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
