@@ -33,7 +33,7 @@ export default function About() {
           <div className="relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden">
             <div className="absolute inset-0 gradient-pink-purple opacity-20"></div>
             <Image
-              src="/placeholder.svg"
+              src="//src/components/images/ChatGPT Image Dec 31, 2025, 02_18_04 AM.png"
               alt="Our team"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
